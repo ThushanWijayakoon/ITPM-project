@@ -1,0 +1,16 @@
+.rate-containner{
+    width: 200px;
+    border: 2px solid;
+    height: 50px;
+}
+.inner-rate-containner{
+    display: block;
+    padding: 5px;
+}
+.inner-rate-containner i{
+    margin-left: 15px;
+    
+}
+.inner-rate-containner i:hover{
+    
+}
