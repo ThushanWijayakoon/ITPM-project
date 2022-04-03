@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rateinsert.css";
+import "./Rateupdate.css";
 import { FaStar } from "react-icons/fa";
 
 const colors = {
@@ -7,7 +7,7 @@ const colors = {
     grey: "#a9a9a9"
 }
 
-function Rateinsert(){
+function Rateupdate(){
 
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
@@ -49,14 +49,16 @@ function Rateinsert(){
                     )
                 })}
             </div>
+            
 
-            <textarea
-                placeholder="what's your feedback"
-                style={styles.textarea}/>
+            
             <div>
+
                 <button className="btn btn-success me-3" style={styles.button}>Submit</button>
-                <button className="btn btn-success" style={styles.button}>Cancel</button>    
+                <button className="btn btn-success" style={styles.button}>Not now</button>
             </div>
+             
+
         </div>
     );
 };
@@ -67,16 +69,8 @@ const styles = {
         flexDirection: "column",
         alignItems: "center",
     },
-    textarea: {
-        border:"1px solid #a9a9a9",
-        borderRadius: 5,
-        width: 300,
-        margin:"20px 0",
-        minHeight:100,
-        padding:10
-    },
-
+ 
 }
 
 
-export default Rateinsert;
+export default Rateupdate;

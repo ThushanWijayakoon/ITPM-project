@@ -1,9 +1,11 @@
 import React from "react";
+import './Footer.css';
 
 function Footer(){
     return(
-        <div>
-            <h1>kakka baba</h1>
+        <div className="Footer">
+
+            <h1>TOP DRAWINGS...</h1>
         </div>
     )
 }
