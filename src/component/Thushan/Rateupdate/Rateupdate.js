@@ -57,6 +57,12 @@ function Rateupdate(){
                 <button className="btn btn-success me-3" style={styles.button}>Submit</button>
                 <button className="btn btn-success" style={styles.button}>Not now</button>
             </div>
+            <div>
+            <button type="button" className="btn btn-link">Give feedback</button>
+            </div>
+            <div>
+            <button type="button" className="btn btn-link">My feedback</button>
+            </div>
              
 
         </div>
