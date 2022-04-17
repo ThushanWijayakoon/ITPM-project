@@ -8,6 +8,8 @@ import Rateupdate from './component/Thushan/Rateupdate/Rateupdate';
 import Feedbackinsert from './component/Thushan/Feedbackinsert/Feedbackinsert';
 
 
+
+
 function App() {
   return (
      <div>
@@ -22,5 +24,6 @@ function App() {
      </div>
   );
 }
+
 
 export default App;

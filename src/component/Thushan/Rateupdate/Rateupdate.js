@@ -1,6 +1,7 @@
 import React from "react";
 import "./Rateupdate.css";
 import { FaStar } from "react-icons/fa";
+import axios from 'axios';
 
 const colors = {
     orange: "#FFBA5A",
@@ -24,10 +25,30 @@ function Rateupdate(){
     const handleMouseLeave = () => {
         setHoverValue(undefined)
     }
+    const Rateid = "Rate"
+    const Userid = "User"
+    const Username = "Name"
+    const Ratedate = "Date"
+
+function Rateadd(){
+    const fdata = {Rateid, Userid, Username, Ratedate}
+
+    axios.post(`http://localhost:8070/Rates/add`,fdata)
+
+    .then((res)=>{
+        
+        
+    })
+    .catch((err)=>{
+        console.log("this is error in post "+err)
+        
+    })
+}
 
 
 
     return(
+        <form onSubmit={Rateadd}>
         <div style={styles.container}>
             <h2>rate this app</h2>
             <div style = {styles.stars}>
@@ -53,8 +74,9 @@ function Rateupdate(){
 
             
             <div>
+            
 
-                <button className="btn btn-success me-3" style={styles.button}>Submit</button>
+                <button type="submit" className="btn btn-success me-3" style={styles.button}>Submit</button>
                 <button className="btn btn-success" style={styles.button}>Not now</button>
             </div>
             <div>
@@ -66,6 +88,7 @@ function Rateupdate(){
              
 
         </div>
+        </form>
     );
 };
 
