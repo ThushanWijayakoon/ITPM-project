@@ -2,7 +2,7 @@ import React from "react";
 import "./Rateupdate.css";
 import { FaStar } from "react-icons/fa";
 import axios from 'axios';
-
+import { Link } from "react-router-dom";
 const colors = {
     orange: "#FFBA5A",
     grey: "#a9a9a9"
@@ -80,10 +80,15 @@ function Rateadd(){
                 <button className="btn btn-success" style={styles.button}>Not now</button>
             </div>
             <div>
-            <button type="button" className="btn btn-link">Give feedback</button>
+                <Link to='/Feedbackinsert'>
+                    <button type="button" className="btn btn-link">Give feedback</button>
+                </Link>
+           
             </div>
             <div>
+                <Link to='/FeedbackView'>
             <button type="button" className="btn btn-link">My feedback</button>
+                </Link> 
             </div>
              
 

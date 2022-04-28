@@ -27,7 +27,14 @@ function Homebody(){
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
+    <div className="Footer">
+
+            <h2>TOP DRAWINGS...</h2>
+        </div>
     </div>
+    
+    
+
     )
 }
 
