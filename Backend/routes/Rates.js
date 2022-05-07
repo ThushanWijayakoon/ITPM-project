@@ -6,12 +6,14 @@ router.route("/add").post((req,res) => {
     const Userid = req.body.Userid;
     const Username = req.body.Username;
     const Ratedate = req.body.Ratedate;
+    const Rating = req.body.Rating;
 
     const newRate = new Rate({
         Rateid,
         Userid,
         Username,
-        Ratedate
+        Ratedate,
+        Rating
     })
 
     newRate.save().then(() => {

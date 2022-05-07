@@ -18,6 +18,10 @@ const RateSchema = new Schema({
     Ratedate : {
         type : Date,
         default:Date.now
+    },
+    Rating : {
+        type : Number,
+        required:true,
     }
 
 })

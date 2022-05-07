@@ -8,6 +8,7 @@ import Rateinsert from './component/Thushan/Rateinsert/Rateinsert';
 import Rateupdate from './component/Thushan/Rateupdate/Rateupdate';
 import Feedbackinsert from './component/Thushan/Feedbackinsert/Feedbackinsert';
 import FeedbackView from './component/Thushan/FeedbackView/FeedbackView';
+import RateReport from './component/Thushan/RateReport/RateReoprt';
 
 
 
@@ -24,6 +25,7 @@ function App() {
            <Route path='/Feedbackinsert' element={<Feedbackinsert/>}/>
            <Route path='/Rateinsert' element={<Rateinsert/>}/>
            <Route path='/FeedbackView' element={<FeedbackView/>}/>
+           <Route path='/RateReport' element={<RateReport/>}/>
            
            
          

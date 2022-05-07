@@ -29,9 +29,18 @@ function Rateupdate(){
     const Userid = "User"
     const Username = "Name"
     const Ratedate = "Date"
+    const Rating = 4
+
+    const fdata = {
+        Rateid,
+        Userid,
+        Username,
+        Ratedate,
+        Rating
+    }
 
 function Rateadd(){
-    const fdata = {Rateid, Userid, Username, Ratedate}
+    const fdata = {Rateid, Userid, Username, Ratedate, Rating}
 
     axios.post(`http://localhost:8070/Rates/add`,fdata)
 
