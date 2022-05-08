@@ -1,0 +1,33 @@
+
+
+.buttonW {
+    width: "400px" !important;
+    height: "30px" !important;
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #0a8e55;
+    
+  text-decoration-style: solid; /* this is default */
+  }
+
+  .sub-container{
+    background-image: url("https://images.unsplash.com/photo-1514195037031-83d60ed3b448?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGFydCUyMGdhbGxlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60");
+    
+    
+    height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  .heading{
+    color: rgb(239, 242, 245);
+    text-shadow: 2px 2px 4px #000000;
+   
+
+  }
+  

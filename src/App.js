@@ -1,14 +1,21 @@
-import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './component/Thushan/Navbar/Navbar';
-import Homebody from './component/Thushan/Homepage/Homebody';
-import Footer from './component/Thushan/Homepage/Footer/Footer';
-import Rateinsert from './component/Thushan/Rateinsert/Rateinsert';
-import Rateupdate from './component/Thushan/Rateupdate/Rateupdate';
-import Feedbackinsert from './component/Thushan/Feedbackinsert/Feedbackinsert';
-import FeedbackView from './component/Thushan/FeedbackView/FeedbackView';
-import RateReport from './component/Thushan/RateReport/RateReoprt';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+import Navbaar from './components/Navbaar';
+import Home from './components/Home';
+import Register from './components/Register';
+import Edit from './components/Edit';
+import Details from './components/Details';
+
+import {Switch,Route} from "react-router-dom"
+
+import workH from './components/workH';
+import workD from './components/workD';
+import workE from './components/workE';
+import workR from './components/workR';
+
+import Salarycal from './components/Salarycal';
+import Dashboard from './components/Dashboard';
 
 
 
@@ -16,32 +23,32 @@ import RateReport from './component/Thushan/RateReport/RateReoprt';
 function App() {
   return (
     <>
-    <Navbar/>
-     <Router>
-       <Routes>
-           
-           <Route path='/' element={<Homebody/>}/>
-           <Route path='/Rateupdate' element={<Rateupdate/>}/>
-           <Route path='/Feedbackinsert' element={<Feedbackinsert/>}/>
-           <Route path='/Rateinsert' element={<Rateinsert/>}/>
-           <Route path='/FeedbackView' element={<FeedbackView/>}/>
-           <Route path='/RateReport' element={<RateReport/>}/>
-           
-           
-         
-       </Routes>
-     </Router>
-    <Footer/> 
-     </> 
+      <Navbaar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/edit/:id" component={Edit} />
+        <Route exact path="/view/:id" component={Details} />
+
+        <Route exact path="/workH" component={workH} />
+        <Route exact path="/register1" component={workR} />
+        <Route exact path="/edit1/:id" component={workE} />
+        <Route exact path="/view1/:id" component={workD} />
+
+        <Route exact path="/Salarycal" component={Salarycal} />
+
+
+        <Route Dashboard path="/Dashbord" component={Dashboard} />
+
+        
+        
+        
+
+
+      </Switch>
+    </>
+       
   );
 }
 
-
 export default App;
-
-{/* <Navbar/>
-       <Homebody/>
-       <Footer/>
-       <Rateinsert/>
-       <Rateupdate/>
-       <Feedbackinsert/> */}

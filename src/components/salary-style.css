@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+  }
+
+.mainContainer {
+
+    background-image: url("https://i.pinimg.com/564x/fb/43/68/fb4368001db69e57c3dfbdf5b0f84a98.jpg");
+    border: 2px solid black;
+    text-align: center;
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  .inputStyle {
+    text-align: center;
+    background-color: hsl(191, 21%, 75%);
+  }
+  
+  .outStyle {
+    text-align: center;
+    background-color: rgba(50, 112, 159, 0.83);
+  }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 25px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .inn {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+   
+
+  }
+  .inputStyle{
+    height:60px;
+    width: 100px;
+    font-size:14pt;
+  }
+  
