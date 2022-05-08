@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import jsPDF from 'jspdf';
 
-
 function RateReport(){
     const addid = "2329443"
 
  const[rate, setrate] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3000/Rates/RateReport'+addid)
+        axios.get('http://localhost:8989/rate/get2/'+addid)
         .then(res=> setrate(res.data.Rate))
         .catch(error=> console.log(error));
     },[]); 

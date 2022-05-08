@@ -1,5 +1,7 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from "react-router-dom";
+
 
 
 function Navbar() {
@@ -18,9 +20,14 @@ function Navbar() {
         <li className="nav-item">
           <a className="nav-link" href="#">Drawings</a>
         </li>
+      
         <li className="nav-item">
+        
           <a className="nav-link" href="#">About us</a>
+          
         </li>
+        
+        
         
         <div className="btn-group" role="group" aria-label="Basic mixed styles example">
           <button type="button" className="btn btn-danger">Login</button>

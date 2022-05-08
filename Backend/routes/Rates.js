@@ -7,13 +7,14 @@ router.route("/add").post((req,res) => {
     const Username = req.body.Username;
     const Ratedate = req.body.Ratedate;
     const Rating = req.body.Rating;
-
+    const Feedback = req.body.Feedback;
     const newRate = new Rate({
         Rateid,
         Userid,
         Username,
         Ratedate,
-        Rating
+        Rating,
+        Feedback
     })
 
     newRate.save().then(() => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Rateupdate.css";
 import { FaStar } from "react-icons/fa";
 import axios from 'axios';
@@ -13,51 +13,53 @@ function Rateupdate(){
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
     const [hoverValue, setHoverValue] = React.useState(undefined);
+    //const [Rating, setRating]=useState("");
+    const [Feedback, setFeedback]=useState("");
  
     const handleClick = value => {
         setCurrentValue(value)
+        console.log("current value is = "+value+" | currentValue"+currentValue);
     };
 
     const handleMouseOver = value => {
         setHoverValue(value)
+       // console.log("Mouse over value is = "+hoverValue);
     }
 
     const handleMouseLeave = () => {
         setHoverValue(undefined)
     }
-    const Rateid = "Rate"
-    const Userid = "User"
-    const Username = "Name"
-    const Ratedate = "Date"
-    const Rating = 4
+    const Rateid = "Rate";
+    const Userid = "User";
+    const Username = "Name";  
+ 
 
-    const fdata = {
-        Rateid,
-        Userid,
-        Username,
-        Ratedate,
-        Rating
-    }
+function onSubmit(e){
 
-function Rateadd(){
-    const fdata = {Rateid, Userid, Username, Ratedate, Rating}
+    e.preventDefault();
+    const Rating = currentValue;
+    
+   
+    const Feedback = "thushan modaya"
+    const fdata = {Rateid, Userid, Username, Rating, Feedback}
+    console.log("rateWork");
 
-    axios.post(`http://localhost:8070/Rates/add`,fdata)
-
-    .then((res)=>{
-        
-        
+    axios.post("http://localhost:8070/Rates/add",fdata)
+    .then(()=>{
+        alert("Rate is added");
+        console.log("update work ");
     })
     .catch((err)=>{
-        console.log("this is error in post "+err)
+        alert("Rate not added");
+        console.log("this is error in post "+err);
         
-    })
+    });
 }
 
 
 
     return(
-        <form onSubmit={Rateadd}>
+        <form onSubmit={onSubmit}>
         <div style={styles.container}>
             <h2>rate this app</h2>
             <div style = {styles.stars}>
@@ -79,17 +81,18 @@ function Rateadd(){
                     )
                 })}
             </div>
-            
 
             
             <div>
             
 
                 <button type="submit" className="btn btn-success me-3" style={styles.button}>Submit</button>
+                <Link to='/Homepage'>
                 <button className="btn btn-success" style={styles.button}>Not now</button>
+                </Link>
             </div>
             <div>
-                <Link to='/Feedbackinsert'>
+                <Link to={`/Feedbackinsert/${Rateid}/${Userid}/${Username}/${currentValue}`}>
                     <button type="button" className="btn btn-link">Give feedback</button>
                 </Link>
            
