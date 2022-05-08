@@ -1,0 +1,10 @@
+.Header {
+    padding: 20px ;
+    text-align: center;
+    background: rgb(128, 120, 120);
+}
+
+.Header img {
+    width: 100px;
+    height: 10px;
+}

@@ -1,0 +1,12 @@
+.ViewDetails {
+    font-family: sans-serif ;
+    text-align: center ;
+  }
+
+.btn2 {
+    width: 200px ;
+	  height: 40px ;
+	  background-color: aqua ;
+	  border: 1px solid black ;
+}
+  
