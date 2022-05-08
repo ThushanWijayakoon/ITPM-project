@@ -11,7 +11,7 @@ import FeedbackView from './component/Thushan/FeedbackView/FeedbackView';
 import RateReport from './component/Thushan/RateReport/RateReoprt';
 
 
-
+///:Rateid/:Userid/:Username/:Rating/:Feedback
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
            
            <Route path='/' element={<Homebody/>}/>
            <Route path='/Rateupdate' element={<Rateupdate/>}/>
-           <Route path='/Feedbackinsert' element={<Feedbackinsert/>}/>
+           <Route path='/Feedbackinsert/:Rateid/:Userid/:Username/:Rating' element={<Feedbackinsert/>}/>
            <Route path='/Rateinsert' element={<Rateinsert/>}/>
            <Route path='/FeedbackView' element={<FeedbackView/>}/>
            <Route path='/RateReport' element={<RateReport/>}/>

@@ -22,6 +22,10 @@ const RateSchema = new Schema({
     Rating : {
         type : Number,
         required:true,
+    },
+    Feedback : {
+        type : String,
+        required : true,
     }
 
 })
